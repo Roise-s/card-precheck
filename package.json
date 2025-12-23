@@ -1,0 +1,34 @@
+{
+  "name": "card-precheck",
+  "version": "1.0.0",
+  "description": "**card-precheck** is a lightweight JavaScript utility for validating credit and debit card numbers **before** sending them to a payment gateway.",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roise-s/card-precheck.git"
+  },
+  "keywords": [
+    "credit-card",
+    "card-validation",
+    "luhn-algorithm",
+    "payments",
+    "saas",
+    "form-validation",
+    "input-validation",
+    "npm-package"
+  ],
+  "author": "Kgaugelo Tladi",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Roise-s/card-precheck/issues"
+  },
+  "homepage": "https://github.com/Roise-s/card-precheck#readme"
+}
