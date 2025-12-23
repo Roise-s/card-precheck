@@ -15,14 +15,18 @@
     "url": "git+https://github.com/Roise-s/card-precheck.git"
   },
   "keywords": [
-    "credit-card",
-    "card-validation",
-    "luhn-algorithm",
-    "payments",
-    "saas",
-    "form-validation",
-    "input-validation",
-    "npm-package"
+   "credit card",
+  "credit card validation",
+  "card precheck",
+  "luhn",
+  "luhn check",
+  "card validator",
+  "payment",
+  "payment validation",
+  "node",
+  "javascript",
+  "npm package",
+  "saas"
   ],
   "author": "Kgaugelo Tladi",
   "license": "MIT",
