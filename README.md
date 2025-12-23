@@ -8,6 +8,32 @@ This package is designed for **pre-validation only** and is not a replacement fo
 
 ---
 
+## Installation
+
+```bash
+npm install card-precheck
+```
+---
+
+## Basic usage
+
+```js
+const { validateCardNumber } = require("card-precheck");
+
+const result = validateCardNumber("4242 4242 4242 4242");
+
+console.log(result);
+/*
+{
+  isValid: true,
+  cardType: "visa",
+  reason: null
+}
+*/
+``` 
+
+---
+
 ## What it does
 
 - Validates card numbers using the Luhn algorithm  
@@ -60,32 +86,6 @@ When building SaaS products with free trials or delayed billing, developers ofte
 - Avoid logging raw card data in your application  
 - Do not rely on this package for fraud prevention  
 - Always use a PCI-compliant payment provider for real transactions  
-
----
-
-## Installation
-
-```bash
-npm install card-precheck
-```
----
-
-## Basic usage
-
-```js
-const { validateCardNumber } = require("card-precheck");
-
-const result = validateCardNumber("4242 4242 4242 4242");
-
-console.log(result);
-/*
-{
-  isValid: true,
-  cardType: "visa",
-  reason: null
-}
-*/
-``` 
 
 ---
 
