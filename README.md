@@ -72,7 +72,20 @@ npm install card-precheck
 
 ## Basic usage
 
-- Usage examples will be added once the public API is finalized.  
+```js
+const { validateCardNumber } = require("card-precheck");
+
+const result = validateCardNumber("4242 4242 4242 4242");
+
+console.log(result);
+/*
+{
+  isValid: true,
+  cardType: "visa",
+  reason: null
+}
+*/
+ 
 
 ---
 
