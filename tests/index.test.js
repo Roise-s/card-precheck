@@ -36,4 +36,38 @@ describe("validateCardNumber", () => {
     expect(result.isValid).toBe(false);
     expect(result.reason).toBe("Invalid length");
   });
+
+  test("handles card number with dashes", () => {
+  const result = validateCardNumber("4242-4242-4242-4242");
+
+  expect(result.isValid).toBe(true);
+  expect(result.cardType).toBe("visa");
+});
+
+test("handles numeric input by converting to string", () => {
+  const result = validateCardNumber(4242424242424242);
+
+  expect(result.isValid).toBe(true);
+  expect(result.cardType).toBe("visa");
+});
+
+test("returns invalid for non-numeric characters", () => {
+  const result = validateCardNumber("4242abcd4242abcd");
+
+  expect(result.isValid).toBe(false);
+  expect(result.reason).toBe("Unsupported or unknown card type");
+});
+
+test("returns invalid for empty input", () => {
+  const result = validateCardNumber("");
+
+  expect(result.isValid).toBe(false);
+  expect(result.reason).toBe("Invalid length");
+});
+
+test("never throws for unexpected input", () => {
+  expect(() => validateCardNumber(null)).not.toThrow();
+  expect(() => validateCardNumber(undefined)).not.toThrow();
+});
+
 });
