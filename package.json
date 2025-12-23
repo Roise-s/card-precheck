@@ -1,6 +1,6 @@
 {
   "name": "card-precheck",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "**card-precheck** is a lightweight JavaScript utility for validating credit and debit card numbers **before** sending them to a payment gateway.",
   "main": "src/index.js",
   "directories": {
