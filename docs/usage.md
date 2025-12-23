@@ -52,3 +52,47 @@ It does **not** mean:
 ## Important note
 
 Even if a card number passes validation, your application must still rely on a PCI-compliant payment provider for real transactions.
+
+---
+
+## API guarantees
+
+card-precheck follows a small set of guarantees to ensure predictable behavior and long-term stability.
+
+### Stable return shape
+The `validateCardNumber` function will always return an object with the following properties:
+
+- `isValid` (boolean)
+- `cardType` (string or null)
+- `reason` (string or null)
+
+This shape will not change in minor or patch releases.
+
+---
+
+### No thrown errors
+The function does not throw errors for invalid input.
+
+All validation failures are expressed through the returned object. This allows the function to be safely used in form validation and user-facing flows without defensive try/catch logic.
+
+---
+
+### No side effects
+card-precheck:
+- Does not store card numbers
+- Does not log input
+- Does not perform network requests
+- Does not mutate external state
+
+---
+
+### Additive changes only
+Future updates may add new fields to the return object, but existing fields will not be removed or renamed without a major version change.
+
+---
+
+### Validation scope
+A `true` value for `isValid` means the card number passes the checks performed by this library.
+
+It does not guarantee authorization success, card existence, or account validity.
+
